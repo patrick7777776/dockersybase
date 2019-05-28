@@ -57,17 +57,6 @@ If you wish to import data from .csv files, execute the following command:
 
 As a precaution, the import csv files will be truncated to 1000 rows.
 
-If you can't build
-------------------
-
-Ask somebody who can build to export sybase:fresh via:
-
-    docker save sybase:fresh -o sybase_fresh.tgz
-
-Once in possession of sybase_fresh.tgz, you can import it via:
-
-    docker load -i sybase_fresh.tgz
-
 
 Resources
 ---------
