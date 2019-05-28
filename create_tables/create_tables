@@ -1,0 +1,6 @@
+CREATE TABLE mydb.dbo.test (
+	testField varchar(32) NOT NULL,
+	CONSTRAINT test_testFi_17440062131 PRIMARY KEY (testField)
+)
+go
+

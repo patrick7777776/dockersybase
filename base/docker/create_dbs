@@ -1,0 +1,20 @@
+disk init name = data01,size="1000M",physname="/var/sybase/TESTSYBASE/mydb_data.dat"
+go
+disk init name = log01,size="1000M",physname="/var/sybase/TESTSYBASE/mydb_log.dat"
+go
+create database mydb on data01="1000M" log on log01 = "1000M"
+go
+sp_configure 'enable console logging',1
+go
+create login user1 with password pass123
+go
+sp_adduser user1
+go
+sp_role "grant",sa_role,user1
+go
+
+use mydb
+go
+master..sp_dboption mydb, "select into", true
+go
+
